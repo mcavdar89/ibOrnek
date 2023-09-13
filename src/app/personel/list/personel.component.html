@@ -1,0 +1,41 @@
+
+<ib-personel-form [data]="personel" (guncelle)="guncelle($event)"></ib-personel-form>
+
+
+<hr/>
+<div class="row">
+    <div class="col-4">
+        <div class="input-group ">
+            <input [(ngModel)]="isim" type="text" class="form-control" placeholder="Username">
+        </div>
+    </div>
+    <div class="col-2">
+        <button type="button" class="btn btn-info" (click)="bul()">Ara</button>
+    </div>
+</div>
+
+
+<hr />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">No</th>
+            <th scope="col">Ad</th>
+            <th scope="col">Soyad</th>
+            <th scope="col">Yaş</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let  item of personelListe; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{item.ad}}</td>
+            <td>{{item.soyad}}</td>
+            <td>{{item.yas}}</td>
+            <td>
+                <button type="button" class="btn btn-info" (click)="duzenle(item)">Düzenle</button>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
