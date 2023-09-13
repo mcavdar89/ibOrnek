@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
+
 import { Personel } from 'src/app/models/personel.model';
 
 @Component({
@@ -7,29 +8,24 @@ import { Personel } from 'src/app/models/personel.model';
   styleUrls: ['./personel-form.component.css']
 })
 export class PersonelFormComponent implements OnInit {
-  @Input() data:Personel ;
-  @Output() guncelle:EventEmitter<Personel> = new EventEmitter<Personel>();
-  /**
-   *
-   */
+  @Input() data: Personel;
+  @Output() guncelle: EventEmitter<Personel> = new EventEmitter<Personel>();
+
   constructor() {
-   
-    
+
   }
-  
+
   ngOnInit(): void {
     this.data = {
-      id:0,
-      ad:"",
-      soyad:"",
-      yas:0
+      id: 0,
+      ad: "",
+      soyad: "",
+      yas: 0
     }
   }
 
-  kaydet(){
+  kaydet() {
     this.guncelle.emit(this.data);
   }
-
-
 
 }

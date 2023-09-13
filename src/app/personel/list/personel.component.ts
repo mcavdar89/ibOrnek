@@ -21,7 +21,7 @@ export class PersonelComponent implements OnInit {
       { id: 3, ad: "Mehmet", soyad: "Şevket", yas: 35 },
       { id: 4, ad: "Hüseyin", soyad: "Kemal", yas: 40 },
       { id: 5, ad: "Zeynep", soyad: "Sibel", yas: 45 },
-      { id: 6, ad: "Merve", soyad: "Sude", yas: 50 },
+      { id: 6, ad: "Merve", soyad: "Sude", yas: 50},
       { id: 7, ad: "Selin", soyad: "Sude", yas: 55 },
       { id: 8, ad: "Selin", soyad: "Sude", yas: 55 },
     ]
